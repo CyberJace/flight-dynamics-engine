@@ -2,21 +2,13 @@
 
 This repository contains python source code for a modular Python library that calculates entry & reentry trajectories, multi-stage thrust integration, relative navigation, and flight interception.
 
-## Key Features
-* **Propulsion & Dynamic Drag:** Numerical integration of velocity under dynamic thrust profiles ($F_{\text{thrust}}(t) = 3000 - 100t$) and linear aerodynamic drag ($F_{\text{drag}} = -bv$).
-* **Multi-Stage Thrust Profiles:** Piecewise state history calculation across burn, coast, and deceleration stages.
-* **Guidance & Pursuit Interception:** Analytic quadratic pursuit solver for time-to-intercept, intercept range, and terminal velocity.
-* **Planar Atmospheric Entry:** Numerical integration of ballistic flight trajectories over ground terrain under acceleration due to gravity.
-* **Relative Kinematics:** Closest Point of Approach (CPA) vector calculation for two independent vehicles on intersecting vector paths.
+core/ - kinematics.py (polynomial kinematics & CPA), propulsion.py (Multi-stage burn, thrust, and drag profiles), interception.py (ballistic integration)
+Main.py - Executes the collection of python files to simulate flight dynamics
 
-## Repository Structure
-```text
-flight-dynamics-engine/
-│
-├── core/
-│   ├── kinematics.py      # Polynomial kinematics & relative CPA vector dynamics
-│   ├── propulsion.py      # Dynamic thrust/drag integration & multi-stage burn solvers
-│   └── interception.py    # Pursuit guidance algorithms & ballistic entry integration
-│
-├── main.py                # Primary execution script for full simulation suite
-└── README.md              # Project documentation
+## Key Features
+
+* **Propulsion & Drag:** Analyzes thrust conditions to determine the behavior of its velocity by applying numerical integration.
+* **Multi-Stage Thrust:** This data is captured by utilizing piecewise functions to express each phase of the flight, connecting flight segments with their respected acceleration stages.
+* **Guidance & Pursuit Interception:** Applies a quadratic pursuit solver to determine intercept time, range, and velocity impact.
+* **Ballistic & Atmospheric Entry:** Applies numerical integration for ballistic reentry, calculating and modeling trajectories that are influenced by acceleration due to gravity.
+* **Relative Kinematics:** Calculating Closest Point of Approach (CPA) for two vehicles that are independent of each other as vectors on a two dimensional plane.
