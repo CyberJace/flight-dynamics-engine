@@ -6,7 +6,7 @@ from core.interception import calculate_intercept_point, simulate_ballistic_reen
 def main():
     print("		FLIGHT DYNAMICS SIMULATION:		")
 
-    _, r_poly, v_poly, _ = simulate_polynomial_flight()
+    _, r_polynomial, v_polynomial, _ = simulate_polynomial_flight()
     t_min_rel, d_min_rel = simulate_relative_motion()
     print("KINEMATICS -")
     print(f"Closest They Approach (Time): {t_min_rel:.2f} s")
