@@ -2,8 +2,8 @@ import numpy as np
 
 def calculate_intercept_point(velocity_target, lead_time, acceleration_intercept):
 	x_lead = velocity_target * lead_time
-	coeffs = [0.5 * acceleration_intercept, -velocity_target, -x_lead]
-	roots = np.roots(coeffs)
+	coefficents = [0.5 * acceleration_intercept, -velocity_target, -x_lead]
+	roots = np.roots(coefficents)
 	time_intercept = [r for r in roots if r > 0][0]
 	x_intercept = 0.5 * acceleration_intercept * (time_intercept**2)
 	velocity_interceptor = acceleration_intercept * time_intercept
