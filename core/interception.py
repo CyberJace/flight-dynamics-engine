@@ -6,8 +6,8 @@ def calculate_intercept_point(v_target, lead_time, acceleration_intercept):
 	roots = np.roots(coeffs)
 	time_intercept = [r for r in roots if r > 0][0]
 	x_intercept = 0.5 * acceleration_intercept * (time_intercept**2)
-	v_interceptor = acceleration_intercept * time_intercept
-	return time_intercept, x_intercept, v_interceptor
+	velocity_interceptor = acceleration_intercept * time_intercept
+	return time_intercept, x_intercept, velocity_interceptor
 
 def simulate_ballistic_reentry(y0=480.0, v0=240.0, angle_deg=53.13, g=9.8, dt=0.001):
 	rad = np.radians(angle_deg)
