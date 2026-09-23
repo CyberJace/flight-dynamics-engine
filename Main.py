@@ -20,7 +20,7 @@ def main():
     print(f"Multistage Final Velocity: {thrust[-1, 2]:.2f} m/s")
     print(f"Highest Speed Point (under drag): {v_max:.2f} m/s (at t={t_vmax:.2f}s)\n")
 
-    t_catch, dist_catch, v_catch = calculate_intercept_point(v_target=40.0, lead_time=15.0, acceleration_intercept=5.0)
+    t_catch, dist_catch, v_catch = calculate_intercept_point(velocity_target=40.0, lead_time=15.0, acceleration_intercept=5.0)
     flight_time, ballistic_path = simulate_ballistic_reentry()
     print("BALLISTIC ENTRY -")
     print(f"Time Intercept: {t_catch:.2f} s | Catch Distance: {dist_catch:.2f} m")
