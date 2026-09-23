@@ -1,9 +1,6 @@
-# Flight Dynamics & Interception Simulation Engine
+# Flight Dynamics Engine in Python Code
 
-A modular Python library for numerical entry trajectories, multi-stage thrust integration, relative target navigation, and pursuit interception mechanics.
-
-## Overview
-This repository provides numerical simulation tools for aerospace flight mechanics and state vector analysis. Built modularly, the engine models atmospheric entry paths, dynamic thrust degradation under atmospheric drag, relative close-approach kinematics, and pursuit-evasion intercept metrics.
+This repository contains python source code for a modular Python library that calculates entry & reentry trajectories, multi-stage thrust integration, relative navigation, and flight interception.
 
 ## Key Features
 * **Propulsion & Dynamic Drag:** Numerical integration of velocity under dynamic thrust profiles ($F_{\text{thrust}}(t) = 3000 - 100t$) and linear aerodynamic drag ($F_{\text{drag}} = -bv$).
