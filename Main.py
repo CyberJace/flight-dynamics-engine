@@ -12,8 +12,8 @@ def main():
     print(f"Closest They Approach (Time): {t_min_rel:.2f} s")
     print(f"Minimum Distance: {d_min_rel:.2f} m\n")
 
-    burn_profile = [(6.0, 20.0), (4.0, 0.0), (10.0, -10.0)]
-    thrust_log = simulate_multistage_burn(burn_profile)
+    burn = [(6.0, 20.0), (4.0, 0.0), (10.0, -10.0)]
+    thrust_log = simulate_multistage_burn(burn)
     t_vmax, v_max = simulate_resistive_motion()
     print("PROPULSION AND VEHICLE DYNAMICS -")
     print(f"Multistage Final Position: {thrust_log[-1, 1]:.2f} m (t={thrust_log[-1, 0]:.1f}s)")
