@@ -3,6 +3,7 @@
 This repository contains python source code for a modular Python library that calculates entry & reentry trajectories, multi-stage thrust integration, relative navigation, and flight interception.
 
 core/ - kinematics.py (polynomial kinematics & CPA), propulsion.py (Multi-stage burn, thrust, and drag profiles), interception.py (ballistic integration)
+
 Main.py - Executes the collection of python files to simulate flight dynamics
 
 ## Key Features
