@@ -13,11 +13,11 @@ def main():
     print(f"Minimum Distance: {d_min_rel:.2f} m\n")
 
     burn = [(6.0, 20.0), (4.0, 0.0), (10.0, -10.0)]
-    thrust_log = simulate_multistage_burn(burn)
+    thrust = simulate_multistage_burn(burn)
     t_vmax, v_max = simulate_resistive_motion()
     print("PROPULSION AND VEHICLE DYNAMICS -")
-    print(f"Multistage Final Position: {thrust_log[-1, 1]:.2f} m (t={thrust_log[-1, 0]:.1f}s)")
-    print(f"Multistage Final Velocity: {thrust_log[-1, 2]:.2f} m/s")
+    print(f"Multistage Final Position: {thrust[-1, 1]:.2f} m (t={thrust[-1, 0]:.1f}s)")
+    print(f"Multistage Final Velocity: {thrust[-1, 2]:.2f} m/s")
     print(f"Highest Speed Point (under drag): {v_max:.2f} m/s (at t={t_vmax:.2f}s)\n")
 
     t_catch, dist_catch, v_catch = calculate_intercept_point(v_target=40.0, lead_time=15.0, a_interceptor=5.0)
