@@ -7,8 +7,8 @@ def simulate_multistage_burn(stages, x0=0.0, v0=-60.0):
     t_global = 0.0
     for duration, accel in stages:
 	    dt = 0.01
-	    steps = int(duration / dt)
-	    for _ in range(steps):
+	    phases = int(duration / dt)
+	    for i in range(phases):
 	        curr_x += curr_v * dt + 0.5 * accel * (dt**2)
 	        curr_v += accel * dt
 	        t_global += dt
